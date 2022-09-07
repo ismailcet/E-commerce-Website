@@ -1,15 +1,14 @@
-import SHOP_DATA from "./shop_data";
-
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import ProductDetail from "./pages/ProductDetail";
+import "./App.css";
 function App() {
-  console.log(SHOP_DATA);
   return (
     <div className="App">
-      deneme
-      {SHOP_DATA.map((cat) =>
-        cat.items.map((item) => (
-          <img src={require(`${item.header_img}`)} alt="" />
-        ))
-      )}
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="product/:id" element={<ProductDetail />} />
+      </Routes>
     </div>
   );
 }

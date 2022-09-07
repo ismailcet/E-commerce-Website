@@ -1,38 +1,234 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  background-color: #fbfcff;
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 .App {
+  padding: 1.5rem 8.4375rem;
+}
+/* Header Section*/
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+.nav-item:first-child {
+  margin-right: 3.125rem;
+}
+.nav-item {
+  margin-right: 1.375rem;
+}
+.nav-item:hover:not(.nav-item:first-child) {
+  border-bottom: 2px solid #000;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile_text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 1rem;
+}
+.name {
+  font-weight: bold;
+}
+
+.user_img {
+  margin-right: 1rem;
+}
+.user_img,
+.cart_img {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 100px;
+}
+.hero_title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.hero_p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+}
+.hero_img {
+  width: 40.125rem;
+  height: 37.75rem;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #212121;
+  color: #fff;
   text-align: center;
+  align-items: center;
+  transition: all 0.5s linear;
+}
+.btn:hover {
+  color: #212121;
+  background-color: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Promotions Section  */
+.promotions {
+  margin-top: 6.25rem;
+}
+.promotions-title-blue {
+  text-align: center;
+  color: #0062f5;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+}
+.promotions-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2.8125rem;
+}
+.promotions-events {
+  display: flex;
+  gap: 0.625rem;
+  justify-content: center;
+}
+.promotions-left {
+  width: 50%;
+}
+.promotions-right {
+  width: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gray {
+  background-color: #d6d6d8;
+  margin-bottom: 0.875rem;
+  height: 13.625rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gray-text {
+  margin: 0 auto;
+}
+.gray-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.gray-title > span {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.gray-info {
+  font-size: 1.125rem;
+}
+.black {
+  background-color: #212121;
+  height: 13.625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.black-title {
+  font-size: 2.25rem;
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+}
+.black-info {
+  font-size: 0.875rem;
+}
+.black-code {
+  margin-top: 0.25rem;
+  padding: 0.625rem 2.875rem;
+  background-color: #424242;
+  border-radius: 0.5rem;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  letter-spacing: 1.5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.promotions-right {
+  display: flex;
+  height: 28.125rem;
+}
+.pink {
+  background-color: #efe1c7;
+  margin-right: 0.875rem;
+  padding: 1rem 1rem 0 1rem;
+}
+.pink-title {
+  color: #212121;
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+}
+.old-price {
+  text-decoration: line-through;
+  font-size: 1rem;
+  color: #666666;
+  margin-right: 0.875rem;
+}
+.new-price {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.pinkImg {
+  margin-top: 6px;
+  overflow: hidden;
+}
+.green {
+  background-color: #d6d6d9;
+  padding: 1rem 1rem 0 1rem;
+}
+.green-title {
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+}
+.pink-img {
+  position: relative;
+}
+.green-img {
+  position: relative;
+}
+.greenImg {
+  margin-top: 6px;
+  overflow: hidden;
+}
+.btn-arrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 1.25rem;
+  right: 0.5rem;
 }
