@@ -104,6 +104,7 @@ a {
   color: #0062f5;
   font-weight: 400;
   margin-bottom: 1.25rem;
+  text-transform: uppercase;
 }
 .promotions-title {
   text-align: center;
@@ -231,4 +232,50 @@ a {
   justify-content: center;
   bottom: 1.25rem;
   right: 0.5rem;
+}
+
+/* Product Slider Section */
+.products {
+  margin-top: 6.25rem;
+  margin-bottom: 6.25rem;
+}
+.products-title-blue {
+  text-align: center;
+  color: #0062f5;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+.products-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2.8125rem;
+}
+.product-img {
+  width: 23.125rem;
+  height: 27.625rem;
+  object-fit: center;
+}
+.product-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.product-price {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.swiper {
+  position: relative;
+}
+.backArrow {
+  position: absolute;
+  top: 45%;
+  z-index: 2;
+}
+.upArrow {
+  position: absolute;
+  top: 45%;
+  left: 93%;
+  z-index: 2;
 }
