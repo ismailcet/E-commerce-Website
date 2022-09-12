@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import ProductFilter from "../components/ProductFilter";
 import ProductsList from "../components/ProductsList";
-import SHOP_DATA from "../shop_data";
+
 import { Link, useParams } from "react-router-dom";
 const Products = () => {
   const { category } = useParams();
