@@ -23,7 +23,7 @@ const ProductsSlide = () => {
           modules={[Pagination, Navigation]}
         >
           {SHOP_DATA[0].items.map((item) => (
-            <SwiperSlide className="slider">
+            <SwiperSlide className="slider" key={item.id}>
               <ProductItem womanImg={woman1} item={item} />
             </SwiperSlide>
           ))}
