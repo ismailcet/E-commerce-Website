@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap");
+
 *,
 ::before,
 ::after {
@@ -8,6 +10,7 @@
 body {
   font-size: 16px;
   background-color: #fbfcff;
+  font-family: "Sora", sans-serif;
 }
 li {
   list-style-type: none;
@@ -255,7 +258,9 @@ a {
 .product-img {
   width: 23.125rem;
   height: 27.625rem;
-  object-fit: center;
+  object-fit: cover;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
 .product-name {
   font-size: 1rem;
@@ -265,17 +270,185 @@ a {
   font-size: 0.8rem;
   font-weight: 700;
 }
-.swiper {
+
+/* Product Overview */
+.productOverview {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 12.5rem;
+}
+.overview-title {
+  font-size: 2.75rem;
+  font-weight: bold;
+  display: flex;
+  width: 40%;
+  margin-bottom: 2rem;
+}
+.overview-content {
+  display: flex;
+}
+.overview-info {
   position: relative;
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
 }
-.backArrow {
+.overview-info::after {
+  content: " Different From Others";
+
   position: absolute;
-  top: 45%;
-  z-index: 2;
+  line-height: 1;
+  z-index: -1;
+  opacity: 5%;
+  font-size: 100px;
+  font-weight: 900;
+  margin-bottom: 3.5rem;
 }
-.upArrow {
-  position: absolute;
-  top: 45%;
-  left: 93%;
-  z-index: 2;
+.info {
+  width: 40%;
+  margin-bottom: 2.5rem;
+  margin-right: 2.5rem;
+}
+.info-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+  word-break: break;
+}
+.info-text {
+  font-size: 0.875rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+}
+.overview-image {
+  width: 30%;
+  text-align: center;
+}
+.overview-img {
+  width: 20, 3125rem;
+  height: 25rem;
+}
+.overview-image-info {
+  margin: auto 0;
+  width: 30%;
+  padding-left: 2.5rem;
+}
+.image-info-text {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 3.125rem;
+}
+/* Email Subscription */
+.email-subs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6.25rem;
+}
+.email-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+.email-info {
+  font-size: 0.875rem;
+  font-weight: light;
+  margin-bottom: 2.5rem;
+}
+.email-input {
+  width: 20rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+  border: 1.2px solid #f1f1f1;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.8125rem;
+  font-weight: regular;
+  color: #666666;
+}
+.email-btn {
+  padding: 0.625rem 1.5rem;
+}
+/* Footer */
+
+.footer-content {
+  padding: 3.125rem 0;
+  width: 100%;
+  display: flex;
+}
+.footer-info {
+  width: 40%;
+  margin-right: 9.75rem;
+}
+.footer-logo {
+  margin-bottom: 1.125rem;
+}
+.footer-text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #666666;
+  margin-bottom: 2.5rem;
+}
+.btn-social {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  background-color: #f1f1f1;
+  color: #666666;
+  margin-right: 10px;
+  border-radius: 0.375rem;
+}
+.btn-social > svg {
+  position: relative;
+  top: 0.3125rem;
+}
+.footer-company {
+  width: 20%;
+  margin-right: 9.75rem;
+}
+.footer-title {
+  font-size: 0.9375rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  color: #666666;
+}
+.footer-link {
+  margin-bottom: 0.625rem;
+}
+.footer-link > a {
+  font-weight: 400;
+  color: #666666;
+}
+.footer-support {
+  width: 20%;
+  margin-right: 9.75rem;
+}
+.footer-contact {
+  width: 20%;
+}
+.line {
+  display: block;
+  margin-left: -8.4375rem;
+  width: 121.6%;
+}
+.bottom-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.125rem;
+}
+.copyright {
+  font-size: 0.75rem;
+  color: #666666;
+  font-weight: 400;
+}
+.createBy {
+  font-size: 0.75rem;
+  color: #666666;
+  font-weight: 400;
 }
