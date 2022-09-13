@@ -12,7 +12,10 @@ const Products = () => {
       <Header />
       <div className="prev">
         <Link to="/">Homepage - </Link>
-        <Link to={`/${category}`} style={{ textTransform: "capitalize" }}>
+        <Link
+          to={`/products/${category}`}
+          style={{ textTransform: "capitalize" }}
+        >
           {category}
         </Link>
       </div>
