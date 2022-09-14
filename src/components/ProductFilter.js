@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { RiArrowDownSFill, RiArrowUpSFill } from "react-icons/ri";
 import { AiFillStar } from "react-icons/ai";
 const ProductFilter = () => {
@@ -65,9 +65,6 @@ const ProductFilter = () => {
     isRate ? setIsRate(false) : setIsRate(true);
   };
 
-  useEffect(() => {
-    console.log(rate);
-  }, [rate]);
   return (
     <div className="products-filter">
       <div className="category-filter">
