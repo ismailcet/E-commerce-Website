@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { RiArrowDownSFill, RiArrowUpSFill } from "react-icons/ri";
 import { AiFillStar } from "react-icons/ai";
 const ProductFilter = () => {
@@ -52,6 +52,22 @@ const ProductFilter = () => {
     isCondition ? setIsCondition(false) : setIsCondition(true);
   };
 
+  //Rate Functions
+  const changeRate = (e) => {
+    if (rate.includes(e.target.getAttribute("value"))) {
+      const deleteRate = rate.indexOf(e.target.getAttribute("value"));
+      rate.splice(deleteRate, 1);
+    } else {
+      setRate([...rate, e.target.getAttribute("value")]);
+    }
+  };
+  const openRate = () => {
+    isRate ? setIsRate(false) : setIsRate(true);
+  };
+
+  useEffect(() => {
+    console.log(rate);
+  }, [rate]);
   return (
     <div className="products-filter">
       <div className="category-filter">
@@ -251,19 +267,20 @@ const ProductFilter = () => {
       <div className="rate-filter">
         <a
           className="filter-title"
-          onClick={openCondition}
+          onClick={openRate}
           style={{ cursor: "pointer" }}
         >
-          PRODUCT RATE{" "}
+          PRODUCT RATE
           <span>{isRate ? <RiArrowDownSFill /> : <RiArrowUpSFill />}</span>
         </a>
-        <div className="rate-options">
+        <div className={`rate-options ${isRate ? "" : "closeRate"}`}>
           <div className="rate-option">
             <input
               type="checkbox"
               id="fiveStar"
               className="starCheckbox"
               value="five"
+              onClick={(e) => changeRate(e)}
             />
             <label htmlFor="fiveStar">
               <div className="stars">
@@ -282,6 +299,7 @@ const ProductFilter = () => {
               id="fourStar"
               className="starCheckbox"
               value="four"
+              onClick={(e) => changeRate(e)}
             />
             <label htmlFor="fourStar">
               <div className="stars">
@@ -300,6 +318,7 @@ const ProductFilter = () => {
               id="threeStar"
               className="starCheckbox"
               value="three"
+              onClick={(e) => changeRate(e)}
             />
             <label htmlFor="threeStar">
               <div className="stars">
