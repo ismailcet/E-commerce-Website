@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RiArrowDownSFill, RiArrowUpSFill } from "react-icons/ri";
+import { AiFillStar } from "react-icons/ai";
 const ProductFilter = () => {
   //Category Filter
   const [isCategory, setIsCategory] = useState(false);
@@ -8,6 +9,14 @@ const ProductFilter = () => {
   //Price Filter
   const [isPrice, setIsPrice] = useState(false);
   const [price, setPrice] = useState("");
+
+  //Condition Filter
+  const [isCondition, setIsCondition] = useState(false);
+  const [condition, setCondition] = useState([]);
+
+  //Rate Filter
+  const [isRate, setIsRate] = useState(false);
+  const [rate, setRate] = useState([]);
 
   //Category Functions
   const changeCategory = (e) => {
@@ -29,11 +38,25 @@ const ProductFilter = () => {
     isPrice ? setIsPrice(false) : setIsPrice(true);
   };
 
+  //Condition Functions
+  const changeCondition = (e) => {
+    if (condition.includes(e.target.getAttribute("value"))) {
+      const deleteItem = condition.indexOf(e.target.getAttribute("value"));
+      condition.splice(deleteItem, 1);
+    } else {
+      setCondition([...condition, e.target.getAttribute("value")]);
+    }
+  };
+
+  const openCondition = () => {
+    isCondition ? setIsCondition(false) : setIsCondition(true);
+  };
+
   return (
     <div className="products-filter">
-      <div className="product-category">
+      <div className="category-filter">
         <a
-          className="category-section"
+          className="filter-title"
           onClick={openCategory}
           style={{ cursor: "pointer" }}
         >
@@ -160,7 +183,7 @@ const ProductFilter = () => {
       </div>
       <div className="price-filter">
         <a
-          className="category-section"
+          className="filter-title"
           onClick={openPrice}
           style={{ cursor: "pointer" }}
         >
@@ -189,6 +212,106 @@ const ProductFilter = () => {
           >
             $$$
           </a>
+        </div>
+      </div>
+      <div className="condition-filter">
+        <a
+          className="filter-title"
+          onClick={openCondition}
+          style={{ cursor: "pointer" }}
+        >
+          PRODUCT CONDITION{" "}
+          <span>{isCondition ? <RiArrowDownSFill /> : <RiArrowUpSFill />}</span>
+        </a>
+        <div
+          className={`condition-options ${isCondition ? "" : "closeCondition"}`}
+        >
+          <div className="option">
+            <input
+              type="checkbox"
+              id="options1"
+              className="condition-option"
+              value="new"
+              onClick={(e) => changeCondition(e)}
+            />
+            <label htmlFor="options1">New Product</label>
+          </div>
+          <div className="option">
+            <input
+              type="checkbox"
+              id="options2"
+              className="condition-option"
+              value="second"
+              onClick={(e) => changeCondition(e)}
+            />
+            <label htmlFor="options2">Second-hand</label>
+          </div>
+        </div>
+      </div>
+      <div className="rate-filter">
+        <a
+          className="filter-title"
+          onClick={openCondition}
+          style={{ cursor: "pointer" }}
+        >
+          PRODUCT RATE{" "}
+          <span>{isRate ? <RiArrowDownSFill /> : <RiArrowUpSFill />}</span>
+        </a>
+        <div className="rate-options">
+          <div className="rate-option">
+            <input
+              type="checkbox"
+              id="fiveStar"
+              className="starCheckbox"
+              value="five"
+            />
+            <label htmlFor="fiveStar">
+              <div className="stars">
+                <AiFillStar className="fill" />
+                <AiFillStar className="fill" />
+                <AiFillStar className="fill" />
+                <AiFillStar className="fill" />
+                <AiFillStar className="fill" />
+              </div>
+              <p className="star-rate">5</p>
+            </label>
+          </div>
+          <div className="rate-option">
+            <input
+              type="checkbox"
+              id="fourStar"
+              className="starCheckbox"
+              value="four"
+            />
+            <label htmlFor="fourStar">
+              <div className="stars">
+                <AiFillStar className="fill" />
+                <AiFillStar className="fill" />
+                <AiFillStar className="fill" />
+                <AiFillStar className="fill" />
+                <AiFillStar className="empty" />
+              </div>
+              <p className="star-rate">4</p>
+            </label>
+          </div>
+          <div className="rate-option">
+            <input
+              type="checkbox"
+              id="threeStar"
+              className="starCheckbox"
+              value="three"
+            />
+            <label htmlFor="threeStar">
+              <div className="stars">
+                <AiFillStar className="fill" />
+                <AiFillStar className="fill" />
+                <AiFillStar className="fill" />
+                <AiFillStar className="empty" />
+                <AiFillStar className="empty" />
+              </div>
+              <p className="star-rate">3</p>
+            </label>
+          </div>
         </div>
       </div>
     </div>

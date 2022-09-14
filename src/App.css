@@ -511,3 +511,42 @@ a {
   height: 0px;
   opacity: 0;
 }
+/* Condition Filter */
+.condition-options {
+  display: flex;
+  flex-direction: column;
+  height: 3rem;
+  visibility: visible;
+  transition: all 1s ease;
+}
+.condition-option {
+  margin-right: 0.75rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  cursor: pointer;
+}
+.closeCondition {
+  height: 0px;
+  opacity: 0;
+}
+
+/* Rate Filter */
+.rate-options {
+  display: flex;
+  flex-direction: column;
+}
+.rate-option {
+  display: flex;
+  align-items: flex-start;
+}
+.rate-option label {
+  display: flex;
+}
+.fill {
+  color: #ffc700;
+}
+.empty {
+  color: #fff;
+  stroke: #ffc700;
+  stroke-width: 50px;
+}
