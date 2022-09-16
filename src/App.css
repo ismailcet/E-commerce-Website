@@ -650,3 +650,20 @@ a {
   opacity: 0;
   margin-bottom: 0;
 }
+
+/* Product Detail */
+.product-detail-hero {
+  margin-top: 2rem;
+  display: flex;
+}
+.images-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.product-images-list {
+  margin-bottom: 1.5rem;
+}
+.product-small-img {
+  width: 8.375rem;
+  height: 8.9375rem;
+}
