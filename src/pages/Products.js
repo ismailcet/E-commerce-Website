@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import ProductFilter from "../components/ProductFilter";
 import ProductsList from "../components/ProductsList";
-
+import Footer from "../components/Footer";
 import { Link, useParams } from "react-router-dom";
 const Products = () => {
   const { category } = useParams();
@@ -35,6 +35,7 @@ const Products = () => {
           <ProductsList categoryId={categoryId} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
