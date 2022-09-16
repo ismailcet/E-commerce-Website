@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SHOP_DATA from "../shop_data";
-import woman1 from "../assets/Woman/3/9833666084894.jpg";
+
 import ProductItem from "./ProductItem";
 
 import { Pagination, Navigation } from "swiper";
@@ -24,7 +24,7 @@ const ProductsSlide = () => {
         >
           {SHOP_DATA[0].items.map((item) => (
             <SwiperSlide className="slider" key={item.id}>
-              <ProductItem womanImg={woman1} item={item} />
+              <ProductItem headerImg={item.header_img} item={item} />
             </SwiperSlide>
           ))}
         </Swiper>

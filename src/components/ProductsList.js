@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SHOP_DATA from "../shop_data";
-const ProductsList = () => {
+import ProductItem from "./ProductItem";
+const ProductsList = ({ categoryId }) => {
   return (
     <div className="products-list">
-      {SHOP_DATA[0].items.map((item) => (
-        <img src={require(`${item.header_img}`)} />
+      {SHOP_DATA[categoryId].items.map((item) => (
+        <ProductItem key={item.id} headerImg={item.header_img} item={item} />
       ))}
     </div>
   );

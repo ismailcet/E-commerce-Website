@@ -1,5 +1,5 @@
 import React from "react";
-import woman2 from "../assets/Woman/2/9784915886110.jpg";
+import woman2 from "./assets/Woman/2/9784915886110.jpg";
 const ProductOverview = () => {
   return (
     <div className="productOverview">
