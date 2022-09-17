@@ -656,14 +656,139 @@ a {
   margin-top: 2rem;
   display: flex;
 }
+
 .images-list {
+  width: 12%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.product-images-list {
-  margin-bottom: 1.5rem;
+  height: 29.8125rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-right: 5.5rem;
 }
 .product-small-img {
   width: 8.375rem;
   height: 8.9375rem;
+  object-fit: cover;
+  object-position: center top;
+}
+.product-image {
+  width: 50%;
+  max-height: 37.5rem;
+  overflow: hidden;
+  margin-right: 3.75rem;
+}
+.product-headerImg {
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.product-info {
+  width: 25%;
+  padding-top: 5.75rem;
+}
+.info-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.sizes {
+  margin-top: 5.625rem;
+  margin-bottom: 2.5rem;
+}
+.sizes h3 {
+  font-size: 0.8125rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.size {
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.5rem 1rem;
+  color: #666666;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+.active-size {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0px 2px 5px 1px #f1f1f1, 0px -2px 5px 1px #f1f1f1;
+}
+.size:not(.size:last-child) {
+  margin-right: 1rem;
+}
+
+.info-price {
+  display: flex;
+  align-items: center;
+}
+.btn-cart {
+  display: flex;
+  margin-right: 1.5rem;
+  align-items: center;
+}
+.btn-cart > svg {
+  margin-right: 0.5rem;
+}
+.price {
+  font: size 1.5rem;
+  font-weight: bold;
+}
+
+/* Product Detail Information */
+.product-information {
+  padding: 3.125rem 4.625rem;
+}
+.information-title {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+.information-title::after {
+  content: "Overview";
+  z-index: -1;
+  position: absolute;
+  line-height: 1;
+  opacity: 3%;
+  font-size: 7.5rem;
+  font-weight: 900;
+  top: -40px;
+  left: 0;
+}
+.product-information hr {
+  border: 1px solid #ebebeb;
+}
+.information-content {
+  padding-top: 3rem;
+}
+.details {
+  display: flex;
+}
+.content-title {
+  margin-right: 8.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666666;
+  white-space: nowrap;
+}
+.details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.care {
+  display: flex;
+}
+.care-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
 }

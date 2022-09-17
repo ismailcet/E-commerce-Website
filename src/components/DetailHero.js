@@ -4,6 +4,10 @@ const DetailHero = ({ product }) => {
   const [headerImg, setHeaderImg] = useState(product.header_img);
   const [size, setSize] = useState("");
 
+  const changeSize = (e) => {
+    setSize(e.target.getAttribute("value"));
+  };
+
   useEffect(() => {
     Object.keys(product).length !== 0 && setHeaderImg(product.header_img);
   }, [, product]);
@@ -21,7 +25,11 @@ const DetailHero = ({ product }) => {
                 className="product-images-list"
                 onClick={() => setHeaderImg(image)}
               >
-                <img src={require(`${image}`)} className="product-small-img" />
+                <img
+                  src={require(`${image}`)}
+                  className="product-small-img"
+                  alt="Product Small Images"
+                />
               </a>
             ))}
           </div>
@@ -35,24 +43,58 @@ const DetailHero = ({ product }) => {
                     ? require(`${headerImg}`)
                     : require(`${product.header_img}`)
                 }
-                alt=""
+                className="product-headerImg"
+                alt="Product Detail Header Images"
               />
             )}
           </div>
           <div className="product-info">
             <h2 className="info-name">{product.name}</h2>
             <div className="sizes">
-              <a className="size">xs</a>
-              <a className="size">s</a>
-              <a className="size">m</a>
-              <a className="size">l</a>
-              <a className="size">xl</a>
+              <h3>Select Size</h3>
+              <div className="size-selects">
+                <a
+                  className={` size ${size === "xs" && "active-size"}`}
+                  value="xs"
+                  onClick={(e) => changeSize(e)}
+                >
+                  xs
+                </a>
+                <a
+                  className={` size ${size === "s" && "active-size"}`}
+                  value="s"
+                  onClick={(e) => changeSize(e)}
+                >
+                  s
+                </a>
+                <a
+                  className={` size ${size === "m" && "active-size"}`}
+                  value="m"
+                  onClick={(e) => changeSize(e)}
+                >
+                  m
+                </a>
+                <a
+                  className={` size ${size === "l" && "active-size"}`}
+                  value="l"
+                  onClick={(e) => changeSize(e)}
+                >
+                  l
+                </a>
+                <a
+                  className={` size ${size === "xl" && "active-size"}`}
+                  value="xl"
+                  onClick={(e) => changeSize(e)}
+                >
+                  xl
+                </a>
+              </div>
             </div>
             <div className="info-price">
-              <a className="btn-cart">
+              <a className="btn-cart btn">
                 <AiOutlineShoppingCart /> Add to Cart
               </a>
-              <h3 className="price">$ {product.price}</h3>
+              <h3 className="price">$ {product.price}.00</h3>
             </div>
           </div>
         </>
