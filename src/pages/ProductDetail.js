@@ -26,7 +26,7 @@ const ProductDetail = () => {
       <div className="detail-content">
         <DetailHero product={product} />
         <DetailInformation />
-        <DetailComment />
+        <DetailComment product={product} />
       </div>
       <Footer />
     </div>
