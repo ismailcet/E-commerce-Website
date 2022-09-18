@@ -789,9 +789,81 @@ a {
 .care-info {
   display: flex;
   flex-direction: column;
+
   padding-left: 1.5rem;
   font-size: 0.875rem;
   font-weight: 600;
 }
 
 /* Product Detail Comments */
+.detail-comments {
+  padding: 3.125rem 4.625rem;
+  position: relative;
+}
+.comments-title {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+.comments-title::after {
+  content: "Reviews";
+  z-index: -1;
+  position: absolute;
+  line-height: 1;
+  opacity: 3%;
+  font-size: 7.5rem;
+  font-weight: 900;
+  top: -40px;
+  left: -0.5rem;
+}
+.detail-comments > .stars {
+  position: absolute;
+  top: 6.25rem;
+  left: 4.625rem;
+}
+.detail-comments hr {
+  border: 1px solid #ebebeb;
+}
+.comment {
+  padding: 3rem 0;
+  display: flex;
+}
+.profile-info {
+  width: 16.875rem;
+}
+.person-name {
+  white-space: nowrap;
+  margin-right: 8.75rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.stars {
+  margin-bottom: 1rem;
+}
+.comment-info {
+  padding-left: 1.5rem;
+}
+.comment-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.comment-text {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.comments-images {
+  display: flex;
+  flex-direction: row;
+}
+.comment-image {
+  width: 3.75rem;
+  height: 3.75rem;
+  object-fit: cover;
+  object-position: center top;
+  margin-right: 1rem;
+  border-radius: 0.25rem;
+}

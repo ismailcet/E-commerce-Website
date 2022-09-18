@@ -26,7 +26,7 @@ const DetailComment = ({ product }) => {
             </div>
             <p className="comment-date">January 22, 2021</p>
           </div>
-          <div className="comments-info">
+          <div className="comment-info">
             <p className="comment-title">High quality product</p>
             <p className="comment-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
@@ -48,6 +48,7 @@ const DetailComment = ({ product }) => {
             </div>
           </div>
         </div>
+        <hr />
         <div className="comment">
           <div className="profile-info">
             <h3 className="person-name">Said r kurnia bahasyim</h3>
@@ -60,7 +61,7 @@ const DetailComment = ({ product }) => {
             </div>
             <p className="comment-date">Mei 1, 2020</p>
           </div>
-          <div className="comments-info">
+          <div className="comment-info">
             <p className="comment-title">Quite satisfied with the service</p>
             <p className="comment-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
