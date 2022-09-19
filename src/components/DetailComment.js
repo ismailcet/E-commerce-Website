@@ -35,16 +35,22 @@ const DetailComment = ({ product }) => {
               Aenean sed mauris, nulla dolor feugiat vel nec, ut vel.
             </p>
             <div className="comments-images">
-              <img
-                src={require(`${product.img[0]}`)}
-                alt="comment small images"
-                className="comment-image"
-              />
-              <img
-                src={require(`${product.img[1]}`)}
-                alt="comment small images"
-                className="comment-image"
-              />
+              {Object.keys(product).length === 0 ? (
+                <h1>Loading ...</h1>
+              ) : (
+                <>
+                  <img
+                    src={require(`${product.img[0]}`)}
+                    alt="comment small images"
+                    className="comment-image"
+                  />
+                  <img
+                    src={require(`${product.img[1]}`)}
+                    alt="comment small images"
+                    className="comment-image"
+                  />
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -70,21 +76,27 @@ const DetailComment = ({ product }) => {
               Aenean sed mauris, nulla dolor feugiat vel nec, ut vel.
             </p>
             <div className="comments-images">
-              <img
-                src={require(`${product.img[0]}`)}
-                alt="comment small images"
-                className="comment-image"
-              />
-              <img
-                src={require(`${product.img[1]}`)}
-                alt="comment small images"
-                className="comment-image"
-              />
-              <img
-                src={require(`${product.img[2]}`)}
-                alt="comment small images"
-                className="comment-image"
-              />
+              {Object.keys(product).length === 0 ? (
+                <h1>Loading ...</h1>
+              ) : (
+                <>
+                  <img
+                    src={require(`${product.img[0]}`)}
+                    alt="comment small images"
+                    className="comment-image"
+                  />
+                  <img
+                    src={require(`${product.img[1]}`)}
+                    alt="comment small images"
+                    className="comment-image"
+                  />
+                  <img
+                    src={require(`${product.img[2]}`)}
+                    alt="comment small images"
+                    className="comment-image"
+                  />
+                </>
+              )}
             </div>
           </div>
         </div>

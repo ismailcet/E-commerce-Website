@@ -3,28 +3,35 @@ import { Link } from "react-router-dom";
 import Logo from "../Images/Logo.svg";
 import ProfilePhoto from "../Images/user.png";
 import Cart from "../Images/Cart.svg";
+import { GiHamburgerMenu } from "react-icons/gi";
 const Header = () => {
   return (
     <header className="header">
       <nav>
+        <div className="nav-logo">
+          <Link to="/">
+            <img src={Logo} alt="Logo" className="nav_logo" />
+          </Link>
+        </div>
         <ul className="nav-items">
-          <li className="nav-item">
-            <Link to="/">
-              <img src={Logo} alt="Logo" className="nav_logo" />
-            </Link>
+          <li className="hamburger-icon">
+            <GiHamburgerMenu />
           </li>
-          <li className="nav-item">
-            <Link to="/products/female">Female</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/products/male">Male</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/products/kids">Kids</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/products/popular">Popular Product</Link>
-          </li>
+
+          <ul className="nav-links">
+            <li className="nav-item">
+              <Link to="/products/female">Female</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/products/male">Male</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/products/kids">Kids</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/products/popular">Popular Product</Link>
+            </li>
+          </ul>
         </ul>
       </nav>
       <div className="left_side">
