@@ -28,6 +28,10 @@ a {
   display: flex;
   justify-content: space-between;
 }
+nav {
+  display: flex;
+  align-items: center;
+}
 .nav-items {
   display: flex;
   align-items: center;
@@ -879,18 +883,25 @@ a {
   .App {
     padding: 0.625rem 1.25rem;
   }
+
+  nav {
+    flex-direction: column;
+  }
   .hamburger-icon {
     display: block;
   }
   .nav-links {
     display: none;
   }
-  .nav-links-open {
+  .nav-links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
   .profile_text {
+    display: none;
+  }
+  .user_img {
     display: none;
   }
 }
