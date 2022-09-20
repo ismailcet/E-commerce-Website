@@ -997,4 +997,38 @@ nav {
   .products {
     margin: 4rem 0;
   }
+  /* Products Overview */
+  .productOverview {
+    margin-bottom: 4rem;
+  }
+  .overview-title {
+    font-size: 2rem;
+  }
+  .overview-content {
+    flex-wrap: wrap;
+  }
+  .overview-info {
+    width: 100%;
+  }
+  .overview-info::after {
+    margin-bottom: 0;
+  }
+  .info {
+    margin: 0;
+  }
+  .overview-image {
+    width: 100%;
+  }
+  .overview-image-info {
+    margin-top: 1rem;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+  .image-info-text {
+    font-size: 0.6rem;
+    line-height: 1rem;
+    letter-spacing: 0;
+    text-align: center;
+  }
 }
