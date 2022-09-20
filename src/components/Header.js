@@ -20,10 +20,6 @@ const Header = () => {
             </Link>
           </div>
           <ul className="nav-items">
-            <a className="hamburger-icon" onClick={toggleNav}>
-              {isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
-            </a>
-
             <ul className="nav-links">
               <li className="nav-item">
                 <Link to="/products/female">Female</Link>
@@ -41,6 +37,9 @@ const Header = () => {
           </ul>
         </nav>
         <div className="left_side">
+          <a className="hamburger-icon" onClick={toggleNav}>
+            {isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
+          </a>
           <div className="profile">
             <p className="profile_text">
               <span className="hello">Hello</span>
