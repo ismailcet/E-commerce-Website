@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SHOP_DATA from "../shop_data";
 
@@ -7,6 +7,10 @@ import ProductItem from "./ProductItem";
 import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 const ProductsSlide = () => {
+  const [windowSize, SetWindowSize] = useState(window.innerWidth);
+  useEffect(() => {
+    SetWindowSize(window.innerWidth);
+  }, [window.innerWidth]);
   return (
     <div className="products">
       <p className="products-title-blue">Products</p>
@@ -14,7 +18,7 @@ const ProductsSlide = () => {
       <div className="swiper">
         <Swiper
           spaceBetween={50}
-          slidesPerView={3}
+          slidesPerView={windowSize < 500 ? 1 : 3}
           loopFillGroupWithBlank={true}
           pagination={{
             clickable: true,

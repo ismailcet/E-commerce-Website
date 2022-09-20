@@ -52,7 +52,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <ul className={`menu-items ${isOpen && "open-items"}`}>
+      <ul className={`menu-items ${isOpen ? "open-items" : ""}`}>
         <li className="nav-item">
           <Link to="/products/female">Female</Link>
         </li>

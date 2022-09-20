@@ -893,7 +893,7 @@ nav {
 
 @media only screen and (max-width: 500px) {
   .App {
-    padding: 0.625rem 1.25rem;
+    padding: 0.625rem 1.5rem;
   }
 
   nav {
@@ -913,7 +913,6 @@ nav {
   }
   .menu-items {
     position: absolute;
-    padding: 0rem 1.25rem;
     top: 0;
     margin-top: 50px;
     margin-bottom: 2.5rem;
@@ -934,5 +933,68 @@ nav {
   }
   .user_img {
     display: none;
+  }
+  /* Hero Component */
+  .hero {
+    flex-direction: column;
+    gap: 0;
+  }
+  .hero_text::after {
+    content: " ";
+    position: absolute;
+    top: 5.5rem;
+    left: 2.4rem;
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    background-color: #ffece3;
+    border-radius: 50%;
+  }
+  .hero_title {
+    font-size: 2.5rem;
+  }
+  .hero_img {
+    display: none;
+  }
+  /* Promotions */
+  .promotions {
+    margin-top: 4rem;
+  }
+  .promotions-events {
+    flex-direction: column;
+  }
+  .promotions-left {
+    width: 100%;
+  }
+  .gray {
+    padding: 0.5rem 1rem;
+  }
+  .gray-title {
+    font-size: 1.5rem;
+  }
+  .gray-info {
+    font-size: 1rem;
+  }
+  .black-title {
+    font-size: 2rem;
+  }
+  .black-info {
+    font-size: 0.7rem;
+  }
+  .black-code {
+    padding: 0.5rem 2.5rem;
+  }
+  .promotions-right {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .pink {
+    margin-right: 0;
+    margin-bottom: 0.875rem;
+  }
+  /* Products Slide */
+  .products {
+    margin: 4rem 0;
   }
 }
