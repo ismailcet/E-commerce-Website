@@ -894,6 +894,7 @@ nav {
 @media only screen and (max-width: 500px) {
   .App {
     padding: 0.625rem 1.5rem;
+    overflow: hidden;
   }
 
   nav {
@@ -1002,7 +1003,7 @@ nav {
     margin-bottom: 4rem;
   }
   .overview-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .overview-content {
     flex-wrap: wrap;
@@ -1030,5 +1031,64 @@ nav {
     line-height: 1rem;
     letter-spacing: 0;
     text-align: center;
+  }
+  /* Email Subs Component */
+  .email-subs {
+    margin-bottom: 4rem;
+  }
+  .email-title {
+    text-align: center;
+    font-size: 1.75rem;
+  }
+  .email-info {
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .email-input {
+    width: 10rem;
+    margin-right: 0.5rem;
+    height: 2.5rem;
+  }
+  .email-btn {
+    padding: 0.5rem;
+  }
+  /* Footer */
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .footer-info {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .footer-company {
+    width: auto;
+    margin-right: 1rem;
+  }
+  .footer-support {
+    width: auto;
+    margin-right: 1rem;
+  }
+  .footer-contact {
+    width: auto;
+  }
+  .footer-title {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  .footer-link {
+    margin-bottom: 0.4rem;
+  }
+  .footer-link > a {
+    font-size: 0.8rem;
+  }
+  .line {
+    margin-left: 0;
+    width: auto;
+  }
+  .bottom-content {
+    margin-top: 0.5rem;
   }
 }
