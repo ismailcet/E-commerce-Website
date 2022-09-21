@@ -6,8 +6,10 @@ const ProductItem = ({ headerImg, item }) => {
       <div className="product-img-container">
         <img src={require(`${headerImg}`)} alt="" className="product-img" />
       </div>
-      <p className="product-name">{item.name}</p>
-      <p className="product-price">${item.price}</p>
+      <div className="item-info">
+        <p className="product-name">{item.name}</p>
+        <p className="product-price">${item.price}</p>
+      </div>
     </div>
   );
 };

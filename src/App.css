@@ -272,11 +272,15 @@ nav {
   margin-bottom: 1.25rem;
   text-transform: uppercase;
 }
+
 .products-title {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2.8125rem;
+}
+.swiper-slide .product-container {
+  max-height: 31.25rem;
 }
 .product-img {
   width: 23.125rem;
@@ -507,7 +511,15 @@ nav {
 .products-content {
   margin-bottom: 6.25rem;
 }
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
 /* Products Filter */
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+}
 .prev {
   margin-bottom: 2rem;
   font-size: 0.75rem;
@@ -521,6 +533,13 @@ nav {
 }
 .products-filter {
   max-width: 15.75rem;
+}
+.filter-open-btn {
+  visibility: hidden;
+  padding: 0.375rem 1.25rem;
+  min-height: 2.25rem;
+  outline: rgb(204, 204, 204) solid 0.09375rem;
+  border-radius: 1.875rem;
 }
 .filter-title {
   font-size: 0.8125rem;
@@ -998,6 +1017,7 @@ nav {
   .products {
     margin: 4rem 0;
   }
+
   /* Products Overview */
   .productOverview {
     margin-bottom: 4rem;
@@ -1090,5 +1110,47 @@ nav {
   }
   .bottom-content {
     margin-top: 0.5rem;
+  }
+  /* Filter Section */
+  .filter-header {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .filter-btn {
+    transition: all 0.5s linear;
+    cursor: pointer;
+  }
+  .filter-open-btn {
+    display: flex;
+    align-items: center;
+    visibility: visible;
+    gap: 8px;
+    font-size: 0.875rem;
+  }
+  .category-side {
+    height: 260vh;
+    left: -550px;
+    z-index: 1;
+    position: absolute;
+    background-color: #fbfcff;
+    padding: 0 2rem;
+
+    transition: all 1s linear;
+  }
+  .open-category {
+    left: 0;
+  }
+  /* Products List */
+  .products-list {
+    padding: 0;
+  }
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-list .product-name {
+    font-size: 0.8375rem;
+    margin-bottom: 0.5rem;
   }
 }

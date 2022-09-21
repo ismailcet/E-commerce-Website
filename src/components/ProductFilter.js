@@ -3,19 +3,19 @@ import { RiArrowDownSFill, RiArrowUpSFill } from "react-icons/ri";
 import { AiFillStar } from "react-icons/ai";
 const ProductFilter = () => {
   //Category Filter
-  const [isCategory, setIsCategory] = useState(false);
+  const [isCategory, setIsCategory] = useState(true);
   const [category, setCategory] = useState("");
 
   //Price Filter
-  const [isPrice, setIsPrice] = useState(false);
+  const [isPrice, setIsPrice] = useState(true);
   const [price, setPrice] = useState("");
 
   //Condition Filter
-  const [isCondition, setIsCondition] = useState(false);
+  const [isCondition, setIsCondition] = useState(true);
   const [condition, setCondition] = useState([]);
 
   //Rate Filter
-  const [isRate, setIsRate] = useState(false);
+  const [isRate, setIsRate] = useState(true);
   const [rate, setRate] = useState([]);
 
   //Category Functions
