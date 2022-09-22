@@ -1153,4 +1153,15 @@ nav {
     font-size: 0.8375rem;
     margin-bottom: 0.5rem;
   }
+  /* Products Detail */
+  .product-detail-hero {
+    flex-direction: column;
+  }
+  .images-list {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    height: auto;
+  }
 }
