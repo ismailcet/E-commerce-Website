@@ -776,7 +776,7 @@ nav {
   margin-right: 0.5rem;
 }
 .price {
-  font: size 1.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -919,6 +919,9 @@ nav {
   nav {
     flex-direction: row;
   }
+  .btn {
+    padding: 0.5rem 0.75rem;
+  }
   .hamburger-icon {
     cursor: pointer;
     display: block;
@@ -942,7 +945,7 @@ nav {
     justify-content: center;
     overflow: hidden;
     align-items: center;
-    transition: all 1s linear;
+    transition: all 0.5s linear;
   }
   .open-items {
     height: 100px;
@@ -1156,6 +1159,7 @@ nav {
   /* Products Detail */
   .product-detail-hero {
     flex-direction: column;
+    flex-direction: column-reverse;
   }
   .images-list {
     display: flex;
@@ -1163,5 +1167,119 @@ nav {
     overflow-y: hidden;
     width: 100%;
     height: auto;
+  }
+  .product-info {
+    width: 100%;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .product-image {
+    width: 100%;
+    margin: 0 0 2rem;
+  }
+  .info-name {
+    font-size: 1rem;
+  }
+  .sizes {
+    margin: 1rem 0;
+  }
+  .sizes h3 {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  .size:not(.size:last-child) {
+    margin-right: 0.5rem;
+  }
+  .size {
+    padding: 0.5rem 0.75rem;
+  }
+  .info-price {
+    justify-content: center;
+  }
+  .btn-cart {
+    margin-right: 1rem;
+  }
+  .price {
+    font-size: 1rem;
+  }
+  /* Detail Information */
+  .product-information {
+    padding: 2.25rem 0.5rem;
+  }
+  .information-title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  .information-title::after {
+    top: -17px;
+    font-size: 3.5rem;
+  }
+  .information-content {
+    padding-top: 1.5rem;
+  }
+  .content-title {
+    margin-right: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #666666;
+  }
+  .details {
+    gap: 0.5rem;
+  }
+  .details-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+  /* Detail Comments */
+  .detail-comments {
+    padding: 2.25rem 0.5rem;
+  }
+  .comments-title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  .comments-title::after {
+    font-size: 3.5rem;
+    top: -17px;
+  }
+  .detail-comments > .stars {
+    position: absolute;
+    top: 3.8rem;
+    left: 0.35rem;
+  }
+  .comment {
+    padding: 1rem 0;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .profile-info {
+    width: auto;
+  }
+  .person-name {
+    margin-right: 0;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .stars {
+    margin: 0;
+  }
+  .comment-date {
+    font-size: 0.8rem;
+  }
+  .comment-info {
+    padding-left: 0;
+  }
+  .comment-title {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  .comment-text {
+    font-size: 0.65rem;
+    line-height: 1rem;
+    margin-bottom: 1rem;
   }
 }
