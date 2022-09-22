@@ -910,7 +910,7 @@ nav {
   border-radius: 0.25rem;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 748px) {
   .App {
     padding: 0.625rem 1.5rem;
     overflow: hidden;
@@ -1281,5 +1281,39 @@ nav {
     font-size: 0.65rem;
     line-height: 1rem;
     margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 748px) and (max-width: 1140px) {
+  .App {
+    padding: 1.5rem 2.75rem;
+  }
+  /* Header */
+  .profile_text {
+    align-items: flex-start;
+  }
+  /* Hero Component */
+  .hero {
+    justify-content: space-between;
+    gap: 0rem;
+  }
+  .hero_title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .hero_p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .hero_img {
+    width: auto;
+    height: 30.625rem;
+  }
+  /* Promotions */
+  .promotions {
+    margin-top: 4rem;
+  }
+  .promotions-title {
+    margin-bottom: 2.125rem;
   }
 }
