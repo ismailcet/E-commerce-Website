@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-const DetailHero = ({ product, addCart }) => {
+import { useDispatch, useSelector } from "react-redux";
+import { addItems, addPrice } from "../Redux/Slice/cartSlice";
+const DetailHero = ({ product }) => {
   const [headerImg, setHeaderImg] = useState(product.header_img);
   const [size, setSize] = useState("");
+
+  const dispatch = useDispatch();
+  const items = useSelector((state) => state.cart.totalPrice);
 
   const changeSize = (e) => {
     setSize(e.target.getAttribute("value"));
@@ -99,7 +104,8 @@ const DetailHero = ({ product, addCart }) => {
                     title[0].classList.add("danger");
                   } else {
                     title[0].classList.remove("danger");
-                    addCart({ product, size });
+                    dispatch(addItems({ product, size }));
+                    dispatch(addPrice(product.price));
                   }
                 }}
               >

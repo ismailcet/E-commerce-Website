@@ -6,13 +6,9 @@ import DetailInformation from "../components/DetailInformation";
 import DetailComment from "../components/DetailComment";
 import Footer from "../components/Footer";
 import SHOP_DATA from "../shop_data";
-const ProductDetail = ({ cart, setCart }) => {
+const ProductDetail = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
-
-  const addCart = (item) => {
-    setCart([...cart, item]);
-  };
 
   useEffect(() => {
     SHOP_DATA.forEach((item) => {
@@ -29,7 +25,7 @@ const ProductDetail = ({ cart, setCart }) => {
         <Link to={`/product/${id}`}>{`Product Details`}</Link>
       </div>
       <div className="detail-content">
-        <DetailHero product={product} addCart={addCart} />
+        <DetailHero product={product} />
         <DetailInformation />
         <DetailComment product={product} />
       </div>
