@@ -37,7 +37,7 @@ const Promotions = () => {
             </p>
             <div className="pink-img">
               <img src={PinkImg} alt="Pink İmage" className="pinkImg" />
-              <Link to="" className="btn-arrow">
+              <Link to="/product/11" className="btn-arrow">
                 <img src={RightArrow} alt="Right Arrow" />
               </Link>
             </div>
@@ -50,7 +50,7 @@ const Promotions = () => {
             </p>
             <div className="green-img">
               <img src={GreenImg} alt="Green Image" className="greenImg" />
-              <Link to="" className="btn-arrow">
+              <Link to="/product/15" className="btn-arrow">
                 <img src={RightArrow} alt="Right Arrow" />
               </Link>
             </div>

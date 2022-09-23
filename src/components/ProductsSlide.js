@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SHOP_DATA from "../shop_data";
-
 import ProductItem from "./ProductItem";
 
 import { Pagination, Navigation } from "swiper";
 import "swiper/css";
+import { Link } from "react-router-dom";
 const ProductsSlide = () => {
   const [windowSize, SetWindowSize] = useState(window.innerWidth);
   useEffect(() => {
@@ -28,7 +28,9 @@ const ProductsSlide = () => {
         >
           {SHOP_DATA[0].items.map((item) => (
             <SwiperSlide className="slider" key={item.id}>
-              <ProductItem headerImg={item.header_img} item={item} />
+              <Link to={`/product/${item.id}`}>
+                <ProductItem headerImg={item.header_img} item={item} />
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

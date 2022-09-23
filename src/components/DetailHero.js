@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-const DetailHero = ({ product }) => {
+const DetailHero = ({ product, addCart }) => {
   const [headerImg, setHeaderImg] = useState(product.header_img);
   const [size, setSize] = useState("");
 
@@ -51,7 +51,7 @@ const DetailHero = ({ product }) => {
           <div className="product-info">
             <h2 className="info-name">{product.name}</h2>
             <div className="sizes">
-              <h3>Select Size</h3>
+              <h3 className="sizes-title">Select Size</h3>
               <div className="size-selects">
                 <a
                   className={` size ${size === "xs" && "active-size"}`}
@@ -91,7 +91,18 @@ const DetailHero = ({ product }) => {
               </div>
             </div>
             <div className="info-price">
-              <a className="btn-cart btn">
+              <a
+                className="btn-cart btn"
+                onClick={() => {
+                  const title = document.getElementsByClassName("sizes-title");
+                  if (size === "") {
+                    title[0].classList.add("danger");
+                  } else {
+                    title[0].classList.remove("danger");
+                    addCart({ product, size });
+                  }
+                }}
+              >
                 <AiOutlineShoppingCart /> Add to Cart
               </a>
               <h3 className="price">$ {product.price}.00</h3>

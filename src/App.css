@@ -81,6 +81,9 @@ nav {
 .user_img {
   margin-right: 1rem;
 }
+.cart-btn {
+  cursor: pointer;
+}
 .user_img,
 .cart_img {
   width: 2.25rem;
@@ -909,7 +912,9 @@ nav {
   margin-right: 1rem;
   border-radius: 0.25rem;
 }
-
+.danger {
+  color: #ff5733;
+}
 @media only screen and (max-width: 748px) {
   .App {
     padding: 0.625rem 1.5rem;

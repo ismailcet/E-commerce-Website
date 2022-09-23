@@ -46,7 +46,7 @@ const ProductOverview = () => {
             color is the actual natural color of the fiber, undyed and 100%
             traceable.
           </p>
-          <a href="#" className="btn">
+          <a href="/products/female" className="btn">
             See All Products
           </a>
         </div>
