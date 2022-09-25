@@ -916,6 +916,148 @@ nav {
 .danger {
   color: #ff5733;
 }
+/* Cart Design */
+.cart-page {
+  margin-top: 2rem;
+  padding: 1.1875rem 4.625rem;
+}
+.cart-title {
+  padding: 3.75rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.cart-page hr {
+  border: 1px solid #ebebeb;
+}
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5.625rem;
+}
+.items-lists {
+  display: flex;
+  flex-direction: column;
+  width: 37rem;
+}
+.cart-item {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+.cart-img {
+  width: 8.5625rem;
+  height: 8.5625rem;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0.5rem;
+}
+.cart-info {
+  width: 100%;
+}
+.info-up {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.cart-name {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+.delete-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.cartItem-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.delivery {
+  margin-right: 5rem;
+}
+.delivery-title {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+.delivery-time {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffc700;
+}
+.size-info {
+  font-size: 0.875rem;
+}
+.size-info > span {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.info-down {
+  display: flex;
+  justify-content: space-between;
+}
+.price-info {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.up-down {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.decrease,
+.increase {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.decrease {
+  background-color: #f1f1f1;
+}
+.item-length {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.increase {
+  border: 2px solid #000;
+  background-color: transparent;
+}
+/* Cart Summary */
+.summary {
+  margin-top: 1.5rem;
+  width: 21.25rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.sum-title {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+.items-price,
+.delivery-price,
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.25rem 0;
+  font-size: 1rem;
+}
+.summary .num {
+  font-weight: 800;
+}
+.summary .checkout-btn {
+  margin-top: 1rem;
+  display: block;
+  cursor: pointer;
+}
 @media only screen and (max-width: 748px) {
   .App {
     padding: 0.625rem 1.5rem;

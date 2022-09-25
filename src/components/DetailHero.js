@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { addItems, addPrice } from "../Redux/Slice/cartSlice";
+import toast, { Toaster } from "react-hot-toast";
+
 const DetailHero = ({ product }) => {
   const [headerImg, setHeaderImg] = useState(product.header_img);
   const [size, setSize] = useState("");
+  const notify = () => toast.success("Added to cart.");
 
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.totalPrice);
@@ -106,9 +109,30 @@ const DetailHero = ({ product }) => {
                     title[0].classList.remove("danger");
                     dispatch(addItems({ product, size }));
                     dispatch(addPrice(product.price));
+                    notify();
                   }
                 }}
               >
+                <Toaster
+                  position="bottom-right"
+                  reverseOrder={false}
+                  gutter={24}
+                  toastOptions={{
+                    // Define default options
+                    className: "",
+                    duration: 5000,
+                    style: {
+                      background: "transparent",
+                      color: "#212121",
+                      border: "2px solid green",
+                    },
+
+                    // Default options for specific types
+                    success: {
+                      duration: 3000,
+                    },
+                  }}
+                />
                 <AiOutlineShoppingCart /> Add to Cart
               </a>
               <h3 className="price">$ {product.price}.00</h3>
