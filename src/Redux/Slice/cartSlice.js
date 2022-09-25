@@ -14,7 +14,14 @@ export const cartSlice = createSlice({
     addPrice: (state, action) => {
       state.totalPrice += action.payload;
     },
+    deleteCartItem: (state, action) => {
+      const deleteItemIndex = state.items.findIndex(
+        (item) => item.product.id === action.payload
+      );
+      state.totalPrice -= state.items[deleteItemIndex].product.price;
+      state.items.splice(deleteItemIndex, 1);
+    },
   },
 });
-export const { addItems, addPrice } = cartSlice.actions;
+export const { addItems, addPrice, deleteCartItem } = cartSlice.actions;
 export default cartSlice.reducer;

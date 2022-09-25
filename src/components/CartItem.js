@@ -1,7 +1,11 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteCartItem } from "../Redux/Slice/cartSlice";
+
 import { RiDeleteBinLine } from "react-icons/ri";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 const CartItem = ({ product }) => {
+  const dispatch = useDispatch();
   return (
     <>
       <div className="cart-item">
@@ -16,7 +20,10 @@ const CartItem = ({ product }) => {
           <div className="info-up">
             {" "}
             <h3 className="cart-name">{product.product.name}</h3>
-            <a className="delete-btn">
+            <a
+              className="delete-btn"
+              onClick={() => dispatch(deleteCartItem(product.product.id))}
+            >
               <RiDeleteBinLine />
             </a>
           </div>
